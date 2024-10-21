@@ -1,0 +1,71 @@
+.contato {
+    background-color: var(--branco);
+    
+    /*para todos os lados*/
+    padding: 1em;
+}
+
+.contato__titulo, .contato__texto {
+    background: var(--azul-degrade);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+.contato__tituto {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contato__texto {
+    font-weight: 300;
+    /*separar o texto do titulo, o primeiro numero quer dizer margin encima e embaixo e o segundo é os lados*/
+    margin: 1em 0;
+}
+
+.contato__email {
+    /*aumentar o tamanho do banner*/
+    padding: 1em;
+    border: 1px solid var(--azul);
+    /*bordas arredondadss*/
+    border-radius: 24px;
+    /*pra borda ocupar o espaço inteiro*/
+    width: 90%;
+    color: var(--azul);
+}
+
+.contato__email::placeholder {
+    font-family: var(--fonte-principal);
+    color: var(--azul);
+    background: url("../img/Email.svg") no-repeat;
+    /*afastar a fotinho da carta das palavras*/
+    padding-left: 2em;
+}
+
+@media screen and (min-width: 1024px) {
+    .contato {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contato__titulo {
+        font-size: 24px;
+    }
+
+.contato__descrição {
+    margin-right: 1em;
+    width: 30%;
+}
+    .contato__email {
+        width: 30%;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .contato {
+        /*vw é a largura da pagina inteira*/
+        padding: 3em 20vw;
+    }
+}
